@@ -7,5 +7,5 @@ module.exports = withBundleAnalyzer({
   eslint: {
     ignoreDuringBuilds: true,
   },
-  basePath: '/https://entjaman.github.io/PersonalWebsite/'
+  basePath: 'https://entjaman.github.io/PersonalWebsite/'
 });
