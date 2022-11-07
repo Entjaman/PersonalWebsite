@@ -7,18 +7,13 @@ export function Welcome() {
   return (
     <>
       <Title className={classes.title} align="center" mt={100}>
-        Welcome to{' '}
+        Jacob Forsell{' '}
         <Text inherit variant="gradient" component="span">
-          Mantine
+          - my website
         </Text>
       </Title>
       <Text color="dimmed" align="center" size="lg" sx={{ maxWidth: 580 }} mx="auto" mt="xl">
-        This starter Next.js project includes a minimal setup for server side rendering, if you want
-        to learn more on Mantine + Next.js integration follow{' '}
-        <Anchor href="https://mantine.dev/guides/next/" size="lg">
-          this guide
-        </Anchor>
-        . To get started edit index.tsx file.
+        Welcome! This website is simply made to showcase I am a curious student who is interested in software with a background in electrical engineering. Here, you can find different ways to reach me and visit my social pages. Take a look around for yourself!
       </Text>
     </>
   );
