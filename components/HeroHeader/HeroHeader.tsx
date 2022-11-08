@@ -122,7 +122,7 @@ export function HeroText() {
         onClose={() => setOpened(false)}
         title="Below you can find my CVs in English and Swedish!"
         >
-        {<UserInfoIcons avatar={'https://github.com/Entjaman/PersonalWebsite/raw/master/public/images/jacobforsell.jpg'} name={'Jacob Forsell'} title={'Electrical Engineer'} phone={'+46 702785302'} email={'jacobzeforsell@gmail.com'}/>}
+        {<UserInfoIcons avatar={'https://github.com/Entjaman/PersonalWebsite/raw/master/public/images/jacobforsell.jpeg'} name={'Jacob Forsell'} title={'Electrical Engineer'} phone={'+46 702785302'} email={'jacobzeforsell@gmail.com'}/>}
         <Container style={{marginTop: '10%'}}>
           <Center>
             <Button className={classes.control} size="lg" variant="default" color="gray">

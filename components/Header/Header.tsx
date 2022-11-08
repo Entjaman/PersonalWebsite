@@ -212,13 +212,6 @@ export function HeaderMegaMenu() {
           <Link href="/" passHref>
               <a href="/" className={classes.link}><IconHome2 style={{ height: "15px", margin: "3px" }}></IconHome2>Home</a>
             </Link>  
-          <a href="#" className={classes.link}>
-            Mitt CV
-          </a>
-          <Collapse in={linksOpened}>{links}</Collapse>
-          <a href="#" className={classes.link}>
-            Kontakta mig
-          </a>
 
           <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
 
