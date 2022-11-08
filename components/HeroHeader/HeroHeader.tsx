@@ -1,4 +1,4 @@
-import { createStyles, Title, Text, Button, Container, ActionIcon, Modal, Group } from '@mantine/core';
+import { createStyles, Title, Text, Button, Container, ActionIcon, Modal, Group, Center } from '@mantine/core';
 import { Dots } from './Dots';
 import Link from 'next/link';
 import { IconDownload } from '@tabler/icons'
@@ -122,13 +122,29 @@ export function HeroText() {
         onClose={() => setOpened(false)}
         title="Below you can find my CVs in English and Swedish!"
         >
-        {<UserInfoIcons avatar={'https://github.com/Entjaman/PersonalWebsite/blob/master/public/images/jacob_i_danmark.jpeg'} name={'Jacob Forsell'} title={'Electrical Engineer'} phone={'+46 702785302'} email={'jacobzeforsell@gmail.com'}/>}
+        {<UserInfoIcons avatar={'https://github.com/Entjaman/PersonalWebsite/raw/master/public/images/jacobforsell.jpg'} name={'Jacob Forsell'} title={'Electrical Engineer'} phone={'+46 702785302'} email={'jacobzeforsell@gmail.com'}/>}
+        <Container style={{marginTop: '10%'}}>
+          <Center>
+            <Button className={classes.control} size="lg" variant="default" color="gray">
+            <IconDownload style={{height: "20px", marginRight: "13px"}}></IconDownload>
+              Download: CV - EN
+            </Button>
+          </Center>
+        </Container>
+        <Container style={{marginTop: '5%'}}>
+          <Center>
+            <Button className={classes.control} size="lg" variant="default" color="gray">
+              <IconDownload style={{height: "20px", marginRight: "13px"}}></IconDownload>
+              Download: CV - SE
+            </Button>
+          </Center>
+        </Container>
         </Modal>
 
         <div className={classes.controls}>
         
             <Button className={classes.control} size="lg" variant="default" color="gray" onClick={() => setOpened(true)}>
-                <IconDownload style={{height: "20px", marginRight: "5px"}}></IconDownload> Curriculum Vitae
+               Curriculum Vitae
             </Button>
        
           <Link href={'contact'}>
