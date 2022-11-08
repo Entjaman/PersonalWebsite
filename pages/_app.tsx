@@ -19,6 +19,9 @@ export default function App(props: AppProps & { colorScheme: ColorScheme }) {
     <>
       <Head>
         <title>Jacob Forsell - electrical engineer</title>
+        <meta name='author' content='Jacob Forsell'/>
+        <meta name='keywords' content='Jacob Forsell, Forsell, Student, LTH, Engineer, Lund'/>
+        <meta name='description' content="Jacob Forsell's private website, for anyone interested!!"/>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         <link rel="shortcut icon" href="/favicon.svg" />
       </Head>
