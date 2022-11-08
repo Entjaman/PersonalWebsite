@@ -1,7 +1,9 @@
-import { createStyles, Title, Text, Button, Container, ActionIcon } from '@mantine/core';
+import { createStyles, Title, Text, Button, Container, ActionIcon, Modal, Group } from '@mantine/core';
 import { Dots } from './Dots';
 import Link from 'next/link';
 import { IconDownload } from '@tabler/icons'
+import { useState } from 'react';
+import { UserInfoIcons } from '../Profile/Profile';
 
 const useStyles = createStyles((theme) => ({
   wrapper: {
@@ -91,6 +93,7 @@ const useStyles = createStyles((theme) => ({
 
 export function HeroText() {
   const { classes } = useStyles();
+  const [opened, setOpened] = useState(false);
 
   return (
     <Container className={classes.wrapper} size={1400}>
@@ -114,12 +117,20 @@ export function HeroText() {
           </Text>
         </Container>
 
+        <Modal
+        opened={opened}
+        onClose={() => setOpened(false)}
+        title="Below you can find my CVs in English and Swedish!"
+        >
+        {<UserInfoIcons avatar={'https://github.com/Entjaman/Test/blob/master/public/images/jacob_i_danmark.jpeg'} name={'Jacob Forsell'} title={'Electrical Engineer'} phone={'+46 702785302'} email={'jacobzeforsell@gmail.com'}/>}
+        </Modal>
+
         <div className={classes.controls}>
-          <Link href={'cv'}>
-            <Button className={classes.control} size="lg" variant="default" color="gray">
+        
+            <Button className={classes.control} size="lg" variant="default" color="gray" onClick={() => setOpened(true)}>
                 <IconDownload style={{height: "20px", marginRight: "5px"}}></IconDownload> Curriculum Vitae
             </Button>
-          </Link>
+       
           <Link href={'contact'}>
             <Button className={classes.control} size="lg"  color="blue">
                 Contact me   
@@ -129,4 +140,24 @@ export function HeroText() {
       </div>
     </Container>
   );
+
+
+function Demo() {
+
+  return (
+    <>
+      <Modal
+        opened={opened}
+        onClose={() => setOpened(false)}
+        title="Introduce yourself!"
+      >
+        {/* Modal content */}
+      </Modal>
+
+      <Group position="center">
+        <Button onClick={() => setOpened(true)}>Open Modal</Button>
+      </Group>
+    </>
+  );
+}
 }
