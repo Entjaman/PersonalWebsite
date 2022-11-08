@@ -1,7 +1,9 @@
 import { TextInput, Textarea, SimpleGrid, Group, Title, Button, Container } from '@mantine/core';
 import { useForm } from '@mantine/form';
+import emailjs from '@emailjs/browser'
 
 export function GetInTouchSimple() {
+  
   const form = useForm({
     initialValues: {
       name: '',
@@ -18,7 +20,24 @@ export function GetInTouchSimple() {
 
   return (
     <Container>
-      <form onSubmit={form.onSubmit(() => {})}>
+      <form id="contactForm"onSubmit={form.onSubmit((form) => {
+        let params = {
+          form,
+          'g-recaptcha-response': '6Le_eewiAAAAAN785g5dzQWwOpRDN6hZgIRMAJIL'
+        }
+        emailjs.send(
+          "service_rci6x5t",
+          "template_ozzjfmj",
+          params,
+          "-GuxFUKbWQ9rwbIvF"
+        ).then(function(response) {
+          alert("Your message has been sent!");
+          console.log('SUCCESS!', response.status, response.text);
+       }, function(error) {
+          alert("Your message could not be sent... Try sending manually to: jacobzeforsell@gmail.com. Please also let me know that the contact form did not work!");
+          console.log('FAILED...', error);
+       });
+      })}>
         <Title
           order={2}
           size="h1"
@@ -63,7 +82,7 @@ export function GetInTouchSimple() {
           autosize
           name="message"
           variant="filled"
-          {...form.getInputProps('subject')}
+          {...form.getInputProps('message')}
         />
 
         <Group position="center" mt="xl">
