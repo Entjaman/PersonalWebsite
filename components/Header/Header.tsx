@@ -179,16 +179,16 @@ export function HeaderMegaMenu() {
 
           <Group className={classes.hiddenMobile}>
             <ColorSchemeToggle></ColorSchemeToggle>
-            <ActionIcon size="xl" radius="xl" variant="default">
+            <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.github.com/Entjaman">
               <IconBrandGithub></IconBrandGithub>
             </ActionIcon>
-            <ActionIcon size="xl" radius="xl" variant="default">
+            <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.linkedin.com/in/jacob-forsell-0aaa81225/">
               <IconBrandLinkedin></IconBrandLinkedin>
             </ActionIcon>
-            <ActionIcon size="xl" radius="xl" variant="default">
+            <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.instagram.com/forselljacob/">
               <IconBrandInstagram></IconBrandInstagram>
             </ActionIcon>
-            <ActionIcon size="xl" radius="xl" variant="default">
+            <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.facebook.com/jacob.forsell.5/">
               <IconBrandFacebook></IconBrandFacebook>
             </ActionIcon>
           </Group>
@@ -224,16 +224,16 @@ export function HeaderMegaMenu() {
 
           <Group position="center" grow pb="xl" px="md">
           <ColorSchemeToggle></ColorSchemeToggle>
-            <ActionIcon size="xl" radius="xl" variant="default">
+          <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.github.com/Entjaman">
               <IconBrandGithub></IconBrandGithub>
             </ActionIcon>
-            <ActionIcon size="xl" radius="xl" variant="default">
+            <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.linkedin.com/in/jacob-forsell-0aaa81225/">
               <IconBrandLinkedin></IconBrandLinkedin>
             </ActionIcon>
-            <ActionIcon size="xl" radius="xl" variant="default">
+            <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.instagram.com/forselljacob/">
               <IconBrandInstagram></IconBrandInstagram>
             </ActionIcon>
-            <ActionIcon size="xl" radius="xl" variant="default">
+            <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.facebook.com/jacob.forsell.5/">
               <IconBrandFacebook></IconBrandFacebook>
             </ActionIcon>
           </Group>
