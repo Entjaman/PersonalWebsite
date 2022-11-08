@@ -21,14 +21,11 @@ export function GetInTouchSimple() {
   return (
     <Container>
       <form id="contactForm"onSubmit={form.onSubmit((form) => {
-        let params = {
-          form,
-          'g-recaptcha-response': '6Le_eewiAAAAAN785g5dzQWwOpRDN6hZgIRMAJIL'
-        }
+
         emailjs.send(
           "service_rci6x5t",
           "template_ozzjfmj",
-          params,
+          form,
           "-GuxFUKbWQ9rwbIvF"
         ).then(function(response) {
           alert("Your message has been sent!");
