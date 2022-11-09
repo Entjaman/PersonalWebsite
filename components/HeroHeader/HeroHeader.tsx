@@ -125,18 +125,22 @@ export function HeroText() {
         {<UserInfoIcons avatar={'https://github.com/Entjaman/PersonalWebsite/raw/master/public/images/jacobforsell.jpeg'} name={'Jacob Forsell'} title={'Electrical Engineer'} phone={'+46 702785302'} email={'jacobzeforsell@gmail.com'}/>}
         <Container style={{marginTop: '10%'}}>
           <Center>
-            <Button className={classes.control} size="lg" variant="default" color="gray">
-            <IconDownload style={{height: "20px", marginRight: "13px"}}></IconDownload>
-              Download: CV - EN
-            </Button>
+            <Link href={'https://github.com/Entjaman/PersonalWebsite/raw/master/public/cv/Jacob_Forsell_CV_EN.pdf'}>
+              <Button className={classes.control} size="lg" variant="default" color="gray">
+                <IconDownload style={{height: "20px", marginRight: "13px"}}></IconDownload>
+                  Download: CV - EN
+              </Button>
+            </Link>
           </Center>
         </Container>
         <Container style={{marginTop: '5%'}}>
           <Center>
-            <Button className={classes.control} size="lg" variant="default" color="gray">
-              <IconDownload style={{height: "20px", marginRight: "13px"}}></IconDownload>
-              Download: CV - SE
-            </Button>
+            <Link href={'https://github.com/Entjaman/PersonalWebsite/raw/master/public/cv/Jacob_Forsell_CV.pdf'}>
+              <Button className={classes.control} size="lg" variant="default" color="gray">
+                <IconDownload style={{height: "20px", marginRight: "13px"}}></IconDownload>
+                  Download: CV - SE
+              </Button>
+            </Link>
           </Center>
         </Container>
         </Modal>
