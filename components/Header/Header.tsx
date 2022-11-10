@@ -179,9 +179,9 @@ export function HeaderMegaMenu() {
 
           <Group className={classes.hiddenMobile}>
             <ColorSchemeToggle></ColorSchemeToggle>
-            <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.github.com/Entjaman">
+            {/* <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.github.com/Entjaman">
               <IconBrandGithub></IconBrandGithub>
-            </ActionIcon>
+            </ActionIcon> */}
             <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.linkedin.com/in/jacob-forsell-0aaa81225/">
               <IconBrandLinkedin></IconBrandLinkedin>
             </ActionIcon>
@@ -217,9 +217,9 @@ export function HeaderMegaMenu() {
 
           <Group position="center" grow pb="xl" px="md">
           <ColorSchemeToggle></ColorSchemeToggle>
-          <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.github.com/Entjaman">
+          {/* <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.github.com/Entjaman">
               <IconBrandGithub></IconBrandGithub>
-            </ActionIcon>
+            </ActionIcon> */}
             <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.linkedin.com/in/jacob-forsell-0aaa81225/">
               <IconBrandLinkedin></IconBrandLinkedin>
             </ActionIcon>
