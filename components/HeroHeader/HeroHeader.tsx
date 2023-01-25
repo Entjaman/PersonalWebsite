@@ -104,7 +104,7 @@ export function HeroText() {
 
       <div className={classes.inner}>
         <Title className={classes.title}>
-          M.sc student in{' '}
+          M.Sc student in{' '}
           <Text component="span" className={classes.highlight} inherit>
             electrical engineering
           </Text>{' '}
