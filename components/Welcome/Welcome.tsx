@@ -9,10 +9,10 @@ export function Welcome() {
       <Title className={classes.title} align="center" mt={100}>
         Jacob Forsell's{' '}
         <Text inherit variant="gradient" component="span">
-          - website
+          private site!
         </Text>
       </Title>
-      <Text color="dimmed" align="center" size="lg" sx={{ maxWidth: 580 }} mx="auto" mt="xl">
+      <Text color="dimmed" align="center" size="lg" sx={{ maxWidth: 580 }} mx="auto" px="15px" mt="xl">
         Welcome! This website is simply made to showcase that I am a curious student who is interested in software development with a background in electrical engineering. Here, you can find different ways to reach me and visit my social pages and resume. Take a look around!
       </Text>
     </>

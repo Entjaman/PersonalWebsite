@@ -3,7 +3,6 @@ import { useForm } from '@mantine/form';
 import emailjs from '@emailjs/browser'
 
 export function GetInTouchSimple() {
-  
   const form = useForm({
     initialValues: {
       name: '',
@@ -21,17 +20,16 @@ export function GetInTouchSimple() {
   return (
     <Container>
       <form id="contactForm"onSubmit={form.onSubmit((form) => {
-
         emailjs.send(
           "service_rci6x5t",
           "template_ozzjfmj",
           form,
           "-GuxFUKbWQ9rwbIvF"
         ).then(function(response) {
-          alert("Your message has been sent!");
+          alert('Your message has been sent!');
           console.log('SUCCESS!', response.status, response.text);
        }, function(error) {
-          alert("Your message could not be sent... Try sending manually to: jacobzeforsell@gmail.com. Please also let me know that the contact form did not work!");
+          alert('Your message could not be sent... Try sending manually to: jacobzeforsell@gmail.com. Please also let me know that the contact form did not work!');
           console.log('FAILED...', error);
        });
       })}>

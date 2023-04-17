@@ -1,42 +1,24 @@
 import {
   createStyles,
   Header,
-  HoverCard,
   Group,
-  Button,
-  UnstyledButton,
-  Text,
-  SimpleGrid,
-  ThemeIcon,
-  Anchor,
   Divider,
-  Center,
   Box,
   Burger,
   Drawer,
-  Collapse,
   ScrollArea,
   ActionIcon,
 } from '@mantine/core';
-import { MantineLogo } from '@mantine/ds';
 import { useDisclosure } from '@mantine/hooks';
 import {
-  IconNotification,
-  IconCode,
-  IconBook,
-  IconChartPie3,
-  IconFingerprint,
-  IconCoin,
-  IconChevronDown,
   IconBrandGithub,
   IconBrandLinkedin,
   IconBrandInstagram,
   IconBrandFacebook,
   IconHome2,
 } from '@tabler/icons';
-import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
-import Image from 'next/image';
 import Link from 'next/link';
+import { ColorSchemeToggle } from '../ColorSchemeToggle/ColorSchemeToggle';
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -98,61 +80,9 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-const mockdata = [
-  {
-    icon: IconCode,
-    title: 'Open source',
-    description: 'This Pokémon’s cry is very loud and distracting',
-  },
-  {
-    icon: IconCoin,
-    title: 'Free for everyone',
-    description: 'The fluid of Smeargle’s tail secretions changes',
-  },
-  {
-    icon: IconBook,
-    title: 'Documentation',
-    description: 'Yanma is capable of seeing 360 degrees without',
-  },
-  {
-    icon: IconFingerprint,
-    title: 'Security',
-    description: 'The shell’s rounded shape and the grooves on its.',
-  },
-  {
-    icon: IconChartPie3,
-    title: 'Analytics',
-    description: 'This Pokémon uses its flying ability to quickly chase',
-  },
-  {
-    icon: IconNotification,
-    title: 'Notifications',
-    description: 'Combusken battles with the intensely hot flames it spews',
-  },
-];
-
 export function HeaderMegaMenu() {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] = useDisclosure(false);
-  const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
   const { classes, theme } = useStyles();
-
-  const links = mockdata.map((item) => (
-    <UnstyledButton className={classes.subLink} key={item.title}>
-      <Group noWrap align="flex-start">
-        <ThemeIcon size={34} variant="default" radius="md">
-          <item.icon size={22} color={theme.fn.primaryColor()} />
-        </ThemeIcon>
-        <div>
-          <Text size="sm" weight={500}>
-            {item.title}
-          </Text>
-          <Text size="xs" color="dimmed">
-            {item.description}
-          </Text>
-        </div>
-      </Group>
-    </UnstyledButton>
-  ));
 
   return (
     <Box pb={20}>
@@ -160,11 +90,9 @@ export function HeaderMegaMenu() {
         <Group position="apart" sx={{ height: '100%' }}>
           <Group className={classes.hiddenMobile} sx={{ height: '100%'}}>
             <Link href="/" passHref>
-              <a href="/" className={classes.link}><IconHome2 style={{ height: "15px", margin: "3px", padding: "auto" }}></IconHome2>Home</a>
-            </Link>  
-            </Group>
-            
-        
+              <a href="/" className={classes.link}><IconHome2 style={{ height: '15px', margin: '3px', padding: 'auto' }} />Home</a>
+            </Link>
+          </Group>
           {/* <Group sx={{ height: '100%' }} spacing={0} className={classes.hiddenMobile}>
             <a href="#" className={classes.link}>
               Home
@@ -178,18 +106,18 @@ export function HeaderMegaMenu() {
           </Group> */}
 
           <Group className={classes.hiddenMobile}>
-            <ColorSchemeToggle></ColorSchemeToggle>
-            {/* <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.github.com/Entjaman">
-              <IconBrandGithub></IconBrandGithub>
-            </ActionIcon> */}
+            <ColorSchemeToggle />
+            <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.github.com/Entjaman">
+              <IconBrandGithub />
+            </ActionIcon>
             <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.linkedin.com/in/jacob-forsell-0aaa81225/">
-              <IconBrandLinkedin></IconBrandLinkedin>
+              <IconBrandLinkedin />
             </ActionIcon>
             <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.instagram.com/forselljacob/">
-              <IconBrandInstagram></IconBrandInstagram>
+              <IconBrandInstagram />
             </ActionIcon>
             <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.facebook.com/jacob.forsell.5/">
-              <IconBrandFacebook></IconBrandFacebook>
+              <IconBrandFacebook />
             </ActionIcon>
           </Group>
 
@@ -208,27 +136,26 @@ export function HeaderMegaMenu() {
       >
         <ScrollArea sx={{ height: 'calc(100vh - 60px)' }} mx="-md">
           <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
-          
           <Link href="/" passHref>
-              <a href="/" className={classes.link}><IconHome2 style={{ height: "15px", margin: "3px" }}></IconHome2>Home</a>
-            </Link>  
+              <a href="/" className={classes.link}><IconHome2 style={{ height: '15px', margin: '3px' }} />Home</a>
+          </Link>
 
           <Divider my="sm" color={theme.colorScheme === 'dark' ? 'dark.5' : 'gray.1'} />
 
           <Group position="center" grow pb="xl" px="md">
-          <ColorSchemeToggle></ColorSchemeToggle>
-          {/* <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.github.com/Entjaman">
-              <IconBrandGithub></IconBrandGithub>
-            </ActionIcon> */}
-            <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.linkedin.com/in/jacob-forsell-0aaa81225/">
-              <IconBrandLinkedin></IconBrandLinkedin>
-            </ActionIcon>
-            <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.instagram.com/forselljacob/">
-              <IconBrandInstagram></IconBrandInstagram>
-            </ActionIcon>
-            <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.facebook.com/jacob.forsell.5/">
-              <IconBrandFacebook></IconBrandFacebook>
-            </ActionIcon>
+          <ColorSchemeToggle />
+          <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.github.com/Entjaman">
+              <IconBrandGithub />
+          </ActionIcon>
+          <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.linkedin.com/in/jacob-forsell-0aaa81225/">
+            <IconBrandLinkedin />
+          </ActionIcon>
+          <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.instagram.com/forselljacob/">
+            <IconBrandInstagram />
+          </ActionIcon>
+          <ActionIcon size="xl" radius="xl" variant="default" component="a" href="https://www.facebook.com/jacob.forsell.5/">
+            <IconBrandFacebook />
+          </ActionIcon>
           </Group>
         </ScrollArea>
       </Drawer>
