@@ -7,9 +7,9 @@ export function Welcome() {
   return (
     <>
       <Title className={classes.title} align="center" mt={100}>
-        Jacob Forsell's{' '}
+        Let's{' '}
         <Text inherit variant="gradient" component="span">
-          private site!
+          explore together
         </Text>
       </Title>
       <Text color="dimmed" align="center" size="lg" sx={{ maxWidth: 580 }} mx="auto" px="15px" mt="xl">
