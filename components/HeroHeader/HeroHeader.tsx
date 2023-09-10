@@ -136,7 +136,7 @@ export function HeroText() {
         <Container style={{ marginTop: '5%' }}>
           <Center>
             <Link href={'https://github.com/Entjaman/PersonalWebsite/raw/master/public/cv/Jacob_Forsell_CV.pdf'}>
-              <Button className={classes.control} size="lg" variant="default" color="gray">
+              <Button className={classes.control} size="lg" variant="default" color="gray" disabled>
                 <IconDownload style={{ height: '20px', marginRight: '13px' }} />
                   Download: CV - SE
               </Button>
